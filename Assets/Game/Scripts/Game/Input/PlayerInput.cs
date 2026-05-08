@@ -13,7 +13,6 @@ public class PlayerInput : MonoBehaviour
     private void Awake()
     {
         _inputActions = new InputActions();
-        Enable();
         RegisterHandlers();
     }
 
