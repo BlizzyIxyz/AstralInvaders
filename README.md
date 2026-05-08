@@ -1,1 +1,1 @@
-Simple 2D URP unity project template for game jams for fast start
+Game for 08/05/26 mini jam
