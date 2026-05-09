@@ -40,7 +40,7 @@ MonoBehaviour:
       SpawnPosition: {x: 22, y: 13}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
       SpawnPosition: {x: 22, y: 10}
-    DelayAfter: 15
+    DelayAfter: 10
   - SpawnEnemyEntries:
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
       SpawnPosition: {x: 15, y: 18}
@@ -51,16 +51,16 @@ MonoBehaviour:
     - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
       SpawnPosition: {x: -23, y: -18}
     DelayAfter: 7
-  - SpawnEnemyEntries: []
-    DelayAfter: 0
-  - SpawnEnemyEntries: []
-    DelayAfter: 0
-  - SpawnEnemyEntries: []
-    DelayAfter: 0
-  - SpawnEnemyEntries: []
-    DelayAfter: 0
-  - SpawnEnemyEntries: []
-    DelayAfter: 0
-  - SpawnEnemyEntries: []
-    DelayAfter: 0
-  <DelayAfter>k__BackingField: 0
+  - SpawnEnemyEntries:
+    - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
+      SpawnPosition: {x: -30, y: 0}
+    - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
+      SpawnPosition: {x: 26, y: 20}
+    - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
+      SpawnPosition: {x: -30, y: 1}
+    - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
+      SpawnPosition: {x: -30, y: -1}
+    - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
+      SpawnPosition: {x: 28, y: 15}
+    DelayAfter: 10
+  <DelayAfter>k__BackingField: 15

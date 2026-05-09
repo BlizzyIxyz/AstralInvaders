@@ -1,19 +1,21 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class TutorialController : MonoBehaviour
 {
     [SerializeField] private GameStartCutscene _gameStartCutscene;
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private WaveController _waveController;
+    [SerializeField] private PlayableDirector _showHud;
 
     public bool MovementTutorialComplete { get; private set; }
     public bool EnemyTutorialComplete { get; private set; }
 
     public event Action OnMovementTutorialStart;
     public event Action OnMovementTutorialCompleate;
-    public event Action OnWaveTutorialCompleate;
+    public event Action TutorialComplete;
 
     private void Awake()
     {
@@ -40,7 +42,9 @@ public class TutorialController : MonoBehaviour
 
         StartCoroutine(_waveController.StartTutorialWave());
         yield return new WaitUntil(() => _waveController.TutorialWaveComplete);
-        OnWaveTutorialCompleate?.Invoke();
+        TutorialComplete?.Invoke();
+
+        _showHud.Play();
 
         PlayerPrefs.SetInt("tu_co", 1);
         PlayerPrefs.Save();
@@ -52,6 +56,8 @@ public class TutorialController : MonoBehaviour
         EnemyTutorialComplete = true;
 
         _waveController.SkipTutorial();
-        OnWaveTutorialCompleate?.Invoke();
+        TutorialComplete?.Invoke();
+
+        _showHud.Play();
     }
 }

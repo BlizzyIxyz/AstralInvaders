@@ -6,9 +6,10 @@ public class Shooter : Enemy
     [SerializeField] private float _rotationAngle;
     [SerializeField] private float _shootDelay;
     [SerializeField] private GameObject _projectilePrefab;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _shootClip;
 
     private bool _playerIsInRange;
-    private bool _isWithinScreen = false;
     private float _delayTimer;
 
     protected override void Update()
@@ -21,11 +22,6 @@ public class Shooter : Enemy
     private void UpdateTimer()
     {
         _delayTimer += Time.deltaTime;
-    }
-
-    public override void OnScreenEnter()
-    {
-        _isWithinScreen = true;
     }
 
     private void TryShoot()
@@ -60,6 +56,8 @@ public class Shooter : Enemy
 
     private void Shoot()
     {
+        _audioSource.PlayOneShot(_shootClip);
+
         Vector2 vector = _playerTransform.position - transform.position;
         Vector2 direction = vector.normalized;
 

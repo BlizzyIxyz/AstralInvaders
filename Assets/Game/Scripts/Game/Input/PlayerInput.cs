@@ -7,6 +7,8 @@ public class PlayerInput : MonoBehaviour
     private InputActions _inputActions;
 
     public event Action OnRMB;
+    public bool IsLMBPressed { get; private set; }
+
     public Vector2 MoveInput { get; private set; }
     public Vector2 PointerPosition { get; private set; }
 
@@ -29,6 +31,9 @@ public class PlayerInput : MonoBehaviour
         _inputActions.Player.PointerMove.performed += HandlePointerMovePerformed;
 
         _inputActions.Player.RMB.started += HandleRMBStarted;
+
+        _inputActions.Player.LMB.started += HandleLMBStarted;
+        _inputActions.Player.LMB.canceled += HandleLMBCancelled;
     }
 
     private void HandleMovePerformed(InputAction.CallbackContext ctx)
@@ -41,20 +46,29 @@ public class PlayerInput : MonoBehaviour
         MoveInput = ctx.ReadValue<Vector2>();
     }
 
-
     private void HandlePointerMovePerformed(InputAction.CallbackContext ctx)
     {
         PointerPosition = ctx.ReadValue<Vector2>();
     }
-
 
     private void HandleRMBStarted(InputAction.CallbackContext _)
     {
         OnRMB?.Invoke();
     }
 
+    private void HandleLMBStarted(InputAction.CallbackContext ctx)
+    {
+        IsLMBPressed = true;
+    }
+
+    private void HandleLMBCancelled(InputAction.CallbackContext ctx)
+    {
+        IsLMBPressed = false;
+    }
+
     public void Disable()
     {
         _inputActions.Disable();
+        IsLMBPressed = false;
     }
 }

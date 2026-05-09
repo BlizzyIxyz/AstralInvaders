@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class WaveController : MonoBehaviour
 {
@@ -9,12 +10,20 @@ public class WaveController : MonoBehaviour
     [SerializeField] private Wave[] _waves;
     [SerializeField] private Wave _tutorialWave;
 
+    [SerializeField] private GameObject[] _bosses;
+    [SerializeField] private Transform _playerTransform;
+    [SerializeField] private Transform _bossSpawnPoint;
+    [SerializeField] private GameObject _bossUpgradeWindow;
+    [SerializeField] private PlayableDirector _winCutscene;
+
     private float _delayTimer;
     private float _currentDelay;
 
     private int _currentWaveIndex;
     private int _currentStepIndex;
     private bool _isWaitingForEnemiesClear;
+    private bool _isBossSpawned;
+    private Boss _currentBossInstance;
 
     public event Action OnLastStepComplete;
 
@@ -38,20 +47,51 @@ public class WaveController : MonoBehaviour
 
     private void HandleWaveTransition()
     {
+        if (_isBossSpawned && _currentBossInstance != null)
+        {
+            return;
+        }
+
         if (!_aggregator.HasEnemies)
         {
+            if (!_isBossSpawned)
+            {
+                if (_bosses != null && _currentWaveIndex < _bosses.Length && _bosses[_currentWaveIndex] != null)
+                {
+                    SpawnBoss(_bosses[_currentWaveIndex]);
+                    return;
+                }
+            }
+
             _currentWaveIndex++;
             _currentStepIndex = 0;
             _isWaitingForEnemiesClear = false;
-
+            _isBossSpawned = false;
+            _currentBossInstance = null;
             _delayTimer = 0f;
 
             if (_currentWaveIndex >= _waves.Length)
             {
                 OnLastStepComplete?.Invoke();
                 enabled = false;
+                _winCutscene.Play();
             }
         }
+    }
+
+    private void SpawnBoss(GameObject bossPrefab)
+    {
+        Vector3 spawnPosition = _bossSpawnPoint != null ? _bossSpawnPoint.position : transform.position;
+
+        GameObject bossObject = Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
+        _currentBossInstance = bossObject.GetComponent<Boss>();
+
+        if (_currentBossInstance != null)
+        {
+            _currentBossInstance.Activate(_playerTransform, _bossUpgradeWindow);
+        }
+
+        _isBossSpawned = true;
     }
 
     private void UpdateTimer()

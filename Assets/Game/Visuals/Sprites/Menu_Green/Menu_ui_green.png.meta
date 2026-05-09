@@ -1386,7 +1386,7 @@ TextureImporter:
         height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 75, y: 42, z: 72, w: 36}
       customData: 
       outline: []
       physicsShape: []
@@ -4312,7 +4312,7 @@ TextureImporter:
         height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 21, y: 0, z: 22, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -4598,7 +4598,7 @@ TextureImporter:
         height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 22, y: 0, z: 22, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -6346,6 +6346,8 @@ TextureImporter:
       Menu_ui_green_24: 6666272789648342912
       Menu_ui_green_240: 3230684635241613267
       Menu_ui_green_241: -4402342186594842168
+      Menu_ui_green_242: 992146689
+      Menu_ui_green_243: -426453291
       Menu_ui_green_25: -184766637976142828
       Menu_ui_green_26: 7814174424251171533
       Menu_ui_green_27: 4700225861292471024

@@ -22,6 +22,9 @@ public abstract class Enemy : MonoBehaviour, IIndicatorTarget
     public bool IsDead => _health.IsDead;
 
     protected Transform _playerTransform;
+    protected bool _isWithinScreen = false;
+
+    public bool IsWithingScreen => _isWithinScreen;
 
     public void Construct(Transform playerTransform)
     {
@@ -47,8 +50,9 @@ public abstract class Enemy : MonoBehaviour, IIndicatorTarget
             if (!health.IsDead)
             {
                 health.ReduceHP(1);
-                _health.Kill();
             }
+
+            _health.Kill();
         }
     }
 
@@ -59,14 +63,11 @@ public abstract class Enemy : MonoBehaviour, IIndicatorTarget
         Destroy(gameObject);
     }
 
-    public virtual void OnScreenEnter()
-    {
-
-    }
-
     public virtual void OnScreenSpaceEnter()
     {
         if (_spriteRenderer != null) _spriteRenderer.enabled = true;
+
+        _isWithinScreen = true;
     }
 
     public void SetRendererVisible(bool visible)

@@ -7,6 +7,11 @@ public class Projectile : MonoBehaviour
 
     private Vector2 _direction;
 
+    private void Start()
+    {
+        Destroy(gameObject, 20f);
+    }
+
     public void Launch(Vector2 direction)
     {
         _direction = direction.normalized;

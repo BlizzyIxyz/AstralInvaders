@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public event Action OnHealthChange;
+    public event Action<float> OnHealthChange;
     public event Action OnDeath;
 
     [SerializeField] private float _initialHP;
@@ -17,9 +17,12 @@ public class Health : MonoBehaviour
     public bool IsDead { get; private set; } = false;
     public bool IsInvulnerable { get; private set; } = false;
 
+    public float InitHp => _initialHP;
+
     private void Awake()
     {
         HP = _initialHP;
+        IsInvulnerable = _activateInvulnerability;
     }
 
     public void ReduceHP(float hp)
@@ -31,7 +34,7 @@ public class Health : MonoBehaviour
 
         HP = Mathf.Clamp(HP, 0, _initialHP);
 
-        OnHealthChange?.Invoke();
+        OnHealthChange?.Invoke(HP);
 
         if (_activateInvulnerability)
         {
@@ -54,7 +57,7 @@ public class Health : MonoBehaviour
 
         HP = Mathf.Clamp(HP, 0, _initialHP);
 
-        OnHealthChange?.Invoke();
+        OnHealthChange?.Invoke(HP);
     }
 
     public void Kill()
@@ -78,6 +81,11 @@ public class Health : MonoBehaviour
     {
         IsInvulnerable = true;
         yield return new WaitForSeconds(duration);
+        IsInvulnerable = false;
+    }
+
+    public void DisableInvulnerability()
+    {
         IsInvulnerable = false;
     }
 }
