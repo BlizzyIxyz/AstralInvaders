@@ -23,9 +23,9 @@ MonoBehaviour:
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
       SpawnPosition: {x: -14, y: -17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
-      SpawnPosition: {x: -14, y: -17}
+      SpawnPosition: {x: 0, y: -17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
-      SpawnPosition: {x: -14, y: -17}
+      SpawnPosition: {x: 14, y: -17}
     DelayAfter: 10
   - SpawnEnemyEntries:
     - Prefab: {fileID: 3763404809078485476, guid: 76eb0cd8c8f9c8d40b4d88438499ee5a, type: 3}
@@ -37,7 +37,7 @@ MonoBehaviour:
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
       SpawnPosition: {x: -14, y: -17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
-      SpawnPosition: {x: -14, y: -17}
+      SpawnPosition: {x: 0, y: -17}
     - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
       SpawnPosition: {x: -24, y: -9}
     - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
@@ -55,7 +55,7 @@ MonoBehaviour:
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
       SpawnPosition: {x: -14, y: -17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
-      SpawnPosition: {x: -14, y: -17}
+      SpawnPosition: {x: 0, y: -17}
     - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
       SpawnPosition: {x: -24, y: -9}
     - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
@@ -73,7 +73,7 @@ MonoBehaviour:
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
       SpawnPosition: {x: -14, y: -17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
-      SpawnPosition: {x: -14, y: -17}
+      SpawnPosition: {x: 0, y: -17}
     - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
       SpawnPosition: {x: -24, y: -9}
     - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
@@ -97,7 +97,7 @@ MonoBehaviour:
     - Prefab: {fileID: 3763404809078485476, guid: 76eb0cd8c8f9c8d40b4d88438499ee5a, type: 3}
       SpawnPosition: {x: -14, y: -17}
     - Prefab: {fileID: 3763404809078485476, guid: 76eb0cd8c8f9c8d40b4d88438499ee5a, type: 3}
-      SpawnPosition: {x: -14, y: -17}
+      SpawnPosition: {x: 0, y: -17}
     - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
       SpawnPosition: {x: -24, y: -9}
     - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
@@ -113,7 +113,7 @@ MonoBehaviour:
     - Prefab: {fileID: 3763404809078485476, guid: 76eb0cd8c8f9c8d40b4d88438499ee5a, type: 3}
       SpawnPosition: {x: -14, y: 17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
-      SpawnPosition: {x: -14, y: -17}
+      SpawnPosition: {x: 0, y: -17}
     - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
       SpawnPosition: {x: -24, y: -9}
     - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
@@ -121,7 +121,7 @@ MonoBehaviour:
     - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
       SpawnPosition: {x: -3.7, y: -17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
-      SpawnPosition: {x: -14, y: -17}
+      SpawnPosition: {x: 14, y: -17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
       SpawnPosition: {x: -7.2, y: 17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
@@ -149,7 +149,7 @@ MonoBehaviour:
     - Prefab: {fileID: 3864175163282133021, guid: 5a0eaa3571b03fa4384933849d0cf735, type: 3}
       SpawnPosition: {x: -3.7, y: -17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
-      SpawnPosition: {x: -14, y: -17}
+      SpawnPosition: {x: 0, y: -17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
       SpawnPosition: {x: -7.2, y: 17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
@@ -177,7 +177,7 @@ MonoBehaviour:
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
       SpawnPosition: {x: -3.7, y: -17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
-      SpawnPosition: {x: -14, y: -17}
+      SpawnPosition: {x: 1, y: -17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
       SpawnPosition: {x: -7.2, y: 17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
@@ -197,7 +197,7 @@ MonoBehaviour:
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
       SpawnPosition: {x: -14, y: 17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
-      SpawnPosition: {x: -14, y: -17}
+      SpawnPosition: {x: 1, y: -17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
       SpawnPosition: {x: -24, y: -9}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
@@ -205,7 +205,7 @@ MonoBehaviour:
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
       SpawnPosition: {x: -3.7, y: -17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
-      SpawnPosition: {x: -14, y: -17}
+      SpawnPosition: {x: 4, y: -17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}
       SpawnPosition: {x: -7.2, y: 17}
     - Prefab: {fileID: 8220501189216506219, guid: 7b232d4bb80f30c4984a6001e4f6c3cc, type: 3}

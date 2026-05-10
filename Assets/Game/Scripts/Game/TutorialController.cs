@@ -9,6 +9,8 @@ public class TutorialController : MonoBehaviour
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private WaveController _waveController;
     [SerializeField] private PlayableDirector _showHud;
+    [SerializeField] private Tutorial _movementTutorial;
+    [SerializeField] private Tutorial _enemyTutorial;
 
     public bool MovementTutorialComplete { get; private set; }
     public bool EnemyTutorialComplete { get; private set; }
@@ -35,14 +37,19 @@ public class TutorialController : MonoBehaviour
 
     private IEnumerator TutorialCoroutine()
     {
+        _movementTutorial.Show();
         OnMovementTutorialStart?.Invoke();
         yield return new WaitUntil(() => _playerInput.MoveInput.sqrMagnitude > 0.01f);
         MovementTutorialComplete = true;
         OnMovementTutorialCompleate?.Invoke();
+        _movementTutorial.Hide();
 
+        _enemyTutorial.Show();
         StartCoroutine(_waveController.StartTutorialWave());
         yield return new WaitUntil(() => _waveController.TutorialWaveComplete);
         TutorialComplete?.Invoke();
+        EnemyTutorialComplete = true;
+        _enemyTutorial.Hide();
 
         _showHud.Play();
 
